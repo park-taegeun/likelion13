@@ -1,0 +1,168 @@
+/*body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: #1C1C1C;
+}
+
+.header {
+  background-color: #66FD96;
+  text-align: center;
+  padding: 20px;
+}
+
+.nav {
+  background: #1C1C1C;
+  padding: 10px;
+  text-align: center;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav ul li a:hover {
+  color: #66FD96;
+}
+
+.main {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+.img {
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  background: #1C1C1C;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  .nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+  .main {
+    padding: 10px;
+  }
+  .header, .footer {
+    padding: 15px;
+  }
+  .img {
+    max-width: 100%;
+  }
+}*/
+
+div, body {
+  margin: auto;
+  text-align: center;
+}
+a:hover { /*a: 링크 관련*/
+  color: red; /* 마우스를 올리면 빨간색으로 변경 */
+  text-decoration: underline; 
+}
+header {
+  background-color: cornflowerblue;
+  font-style: italic;
+}
+header p {
+  background-color: rgb(66, 115, 188);
+}
+footer { /*.을 안 붙이는 거는 태그 선택자*/
+  background: #1c1c1c;
+  color: white;
+}
+nav {
+  padding: 10px;
+  text-align: center;
+}
+nav ul { /*띄어쓰기가 의미하는 거는 nav를 찾고 그 안의 ul을 선택하라.
+         띄어쓰쓰기로 구분되는 거는 적혀져있는 모든 부분이 아니라 마지막 부분에만 적용되는 거임*/
+  list-style: circle;
+  padding: 0;
+}
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+nav ul li a {
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: orangered;
+}
+.choco-link:hover { /*.을 붙이는 거는 클래스 선택자*/
+  color: brown;
+}
+main h4 {
+  text-decoration: underline;
+  font-style: inherit;
+  padding-bottom: 0px;
+}
+main a {
+  color: goldenrod;
+}
+nav {
+  padding: 0px;
+}
+nav h3 {
+  background-color: antiquewhite;
+}
+main {
+  padding: 0px;
+}
+.name {
+  border: 3px solid black;
+  padding: 15px; width: fit-content;
+  background-color: blanchedalmond;
+}
+.aboutme {
+  border: 3px ridge black;
+  padding: 15px;
+  width: 800px;
+  background-color:rgb(150, 122, 81);
+}
+.box {
+  border: 3px ridge black;
+  padding: 15px;
+  width: 800px;
+  background-color: rgb(105, 104, 149);
+}
+.favorite {
+  border: 3px ridge black;
+  padding: 15px;
+  width: fit-content;
+  background-color: rgb(121, 167, 149);
+}
+.sns {
+  border: 3px ridge black;
+  padding: 15px;
+  width: fit-content;
+  background-color: rgb(182, 133, 193);
+}
