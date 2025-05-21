@@ -46,6 +46,6 @@ export const Item = styled(Link)`
   &.qnaActive {
     color: black;
     font-weight: bold;
-    border-bottom: 2px solid lightcoral;
+    border-bottom: 2px solid rgb(223, 233, 28);
   }
 `;
