@@ -33,6 +33,8 @@ export const SubTitle = styled.p`
 export const CardList = styled.div`
   display: flex;
   flex-direction: column;
-  background-color:rgb(249, 203, 87);
+  background-color:rgb(252, 226, 162);
   border-radius: 13px;
+  gap: 15px;
+  padding: 13px 20px;
 `;
