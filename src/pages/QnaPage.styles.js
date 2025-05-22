@@ -27,7 +27,7 @@ export const SubTitle = styled.p`
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 `;
 
 export const CardList = styled.div`
