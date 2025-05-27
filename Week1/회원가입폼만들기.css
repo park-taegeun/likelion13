@@ -1,0 +1,13 @@
+h2 {
+    border-radius: 5px; /*테두리 둥글게*/
+    background-color: wheat;
+    text-align: center;
+    padding: 15px 0; /*padding에 2가지가 적혀있으면 위아래 / 좌우에 적용되는 거 -> 15px 위 아래, 0px 좌우*/
+}
+#regform {
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin: auto; /*가운데 정렬 -> width가 정의되어잇을 때만 사용*/
+    width: 50%; /*가로 너비를 부모 너비의 50%로 설정*/
+    background-color: sandybrown;
+}

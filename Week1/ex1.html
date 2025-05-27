@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>사용자 이름을 입력받고 인사하기</title>
+        <link rel="stylesheet" href="ex1.css" />
+        <script src="ex1.js"></script>
+    </head>
+    <body>
+        <div class="intersection">
+            <h1>JavaScrip로 사용자와 상호작용하기</h1>
+            <p>아래에 이름을 입력하고 버튼을 눌러보세요!</p>
+            <!--이름 입력 받는 칸-->
+            <input type="text" id="nameInput" placeholder="이름을 입력하세요"> 
+            <!--버튼-->
+            <button onClick="greetUser()" class="InputButton">인사하기</button>
+        </div>
+        <!--인사 메시지가 표현될 곳-->
+        <div id="greeting"></div>
+    </body>
+</html>

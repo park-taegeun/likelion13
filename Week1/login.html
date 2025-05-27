@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="login.css" />
+    </head>
+    <body>
+        <div class="login-container">
+            <h2>로그인</h2>
+            <form> <!--form 태그: 사용자가 데이터를 입력하고 제출할 수 있도록 구성된 폼-->
+                <input type="text" placeholder="아이디" required>
+                <!--설정한 type에 따라서 브라우저의 동작이 정의된 것에 따라 달라진다. text: 사용자가 입력한 텍스트가 그대로 보입니다.-->
+                <!--placeholder: 입력란에 힌트로 보이는 글자--> <!--required: 필수로 작성되어야 하는 칸-->
+                <input type="password" placeholder="비밀번호" required>
+                <!--type이 password라면 입력된 문자가 보이지 않는다.-->
+                <button type="submit">로그인</button>
+                <!--type이 submit라면 클릭 시 데이터를 전송한다.-->
+            </form>
+        </div>
+    </body>
+</html>

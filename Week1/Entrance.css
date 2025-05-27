@@ -1,0 +1,155 @@
+body {
+    margin: 0; /*외부 여백 설정 - 브라우저는 기본으로 태그 주위에 여백을 둠*/
+    padding: 0; /*내부 여백 설정*/
+    background-color:ivory;
+    color:black; /*텍스트 색상*/
+}
+.auth { 
+    position: absolute; /*페이지의 절대 위치 지정 -> 내 임의대로 위치를 지정할 수 있다.*/
+    top: 5px; /*화면 위에서 5px 떨어진 위치*/
+    right: 10px; /* 화면 오른쪽에서 10px 떨어진 위치 */
+    display: flex; /* 내부 요소들을 가로로 배치 (수평 배치) + gap 속성 사용 위해 */
+    gap: 10px; /* 로그인 버튼과 회원가입 버튼 사이의 간격 */
+    font-size: smaller;
+}
+.auth a {
+    text-decoration: none;
+    padding: 0;
+    color: rgb(52, 50, 50);
+}
+.header {
+    text-align: center; /*중앙 정렬*/
+    background-color: beige;
+}
+.header_p {
+    font-style: italic;
+    font-size: smaller;
+}  
+.nav {
+    background-color: whitesmoke;
+    padding: 10px;
+    text-align: center;
+}
+.nav ul {
+    list-style: none; /*목록 옆 문자 스타일*/
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.nav ul li {
+    /*display: inline;*/ /*inline 속성을 주면 옆으로 나란히 배치된다.*/
+    /*block로 속성을 주면 세로로 정렬된다.*/       
+    background-color: skyblue;
+    padding: 10px 20px;
+    border-radius: 12px; /*네모난 박스를 얼마나 동그랗게 만들거냐*/
+    border: 1px blue;
+}
+.nav ul li a:hover {
+    color:red;
+}
+.nav ul li:hover { /*li(목록 리스트)들을 눌렀을 때의 효과*/
+    background-color: rgb(104, 104, 205);
+    transition: background-color 0.3s ease; /*속성이 변화될 때 부드러운 애니메이션 효과를 줄 수 있음*/
+}
+.nav ul li a.instagram:hover {
+    color: hotpink;
+}
+.instagram {
+    color:rgb(183, 92, 107);
+}
+.img_container {
+    display: flex; /*flexbox 사용해서 레이아웃*/
+    justify-content: space-between;   
+}
+.img_ent, .img_sea {
+    width: 50%;
+}
+main h2 {
+    text-align: center;
+    background-color: slategray;
+    color: white;
+    font-style: italic;
+}
+.lmood {
+    background-color: rgb(232, 213, 189);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 75%;
+    margin: 20px auto;
+}
+.lmood h3, .belier h3, .noun h3, .modnine h3, .divein h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}   
+.link_lmood, .link_belier, .link_noun, .link_modnine, .link_divein{
+    color:black;
+    text-decoration: dotted;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+    /*transition 속성: 마우스를 올렸을 때의 효과설정*/
+    /*transform 0.3 ease: transform 속성 변경 시 0.3초 동안 부드럽게 변화*/
+    /*font-size 0.2 ease: font-size 변경 시 0.2초 동안 부드럽게 변화*/
+    /*기본상태에서는 transition을 설정하는 거고 이 속성의 상세 값은 hover 쪽에서 설정함.*/
+}
+.link_lmood:hover {
+    color: navy;
+    transform: scale(1.2);
+    font-size: 1.2em;
+}
+.belier {
+    background-color:rgb(222, 193, 249);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 75%;
+    margin: 20px auto;
+    /*margin은 요소의 외부간격을 지정하는 속성*/
+    /*20px: 위 아래의 여백, 0: 좌우 여백을 자동(균등)으로 설정 -> 가운데정렬*/
+}
+.link_belier:hover {
+    color: brown;
+    transform: scale(1.2); /*scale: 가로/세로크기 확대*/
+    font-size: 1.2em; /*font-size: 글자 크기 확대대*/
+}
+.noun {
+    background-color: rgb(205, 195, 195);
+    width: 75%;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.link_noun:hover {
+    color:rgb(244, 244, 223);
+    transform: scale(1.2);
+    font-size: 1.2em;
+}
+.modnine {
+    background-color:rgb(204, 233, 174);
+    padding: 20px;
+    border-radius: 10px;
+    width: 75%;
+    margin: 20px auto;
+}
+.link_modnine:hover {
+    color: rgb(246, 166, 180);
+    transform: scale(1.2);
+    font-size: 1.2em;
+}
+.link_eastpack {
+    color: blue;
+}
+.divein {
+    background-color: rgb(251, 173, 144);
+    width: 75%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+.link_divein:hover {
+    color:rgb(209, 18, 18);
+    transform: scale(1.2);
+    font-size: 1.2em;
+}

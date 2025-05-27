@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox 예제</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            background-color: #777777;
+        }
+        .box {
+            width: 150px;
+            height: 100px;
+            padding: 20px;
+            border: 3px solid black;
+            background-color: lightblue;
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+</body>
+</html>
+<!-- fltx-direction은 display: flex; 일 때만 가능능  -->
+<!-- flex-direction : 말 그대로 방향 설정
+ row는 가로 column은 세로 row-reverse는 가로인데 순서 반대로 column-reverse는 세로인데 순서 반대로 -->
+<!-- flex-wrap : 화면 크기에 맞게 박스가 알아서 조절 / nowrap : 무슨 짓을 해도 줄바꿈이 안됌 -->
+<!-- align-items: div태그들을 어떻게 정렬할 것인가, align-itmes는 flex-direction의 축을 따라서 정렬
+ center: 가운데 정렬, flex-start: 맨위로 flex-end: 맨 아래로 stretch: 요소들을 끝까지 늘림 -->
+<!-- justify-content는 flex-direction의 축의 반대쪽으로
+ 예를 들어 flex-direction이 row야 그러면 column을 기준으로 위 아래 가운데 이렇게 진행 -->
