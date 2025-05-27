@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const TitleSection = styled.div`
+export const MainSection = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 150px;
@@ -8,7 +8,7 @@ export const TitleSection = styled.div`
     align-items: flex-start;
 `;
 
-export const Title = styled.p`
+export const MainText = styled.p`
     color: #1C1B1A;
     font-family: Pretendard;
     font-size: 48px;
@@ -17,7 +17,7 @@ export const Title = styled.p`
     line-height: 130%; /* 62.4px */
 `;
 
-export const TitleButton = styled.button`
+export const Button = styled.button`
     display: inline-flex;
     padding: 10px 30px;
     flex-direction: column;

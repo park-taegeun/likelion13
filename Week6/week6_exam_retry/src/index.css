@@ -38,5 +38,5 @@ body::-webkit-scrollbar {
 
 @font-face {
   font-family: "Pretendard";
-  src: url("./assets/PretendardVariable.woff2");
+  src: url("./assets/PretendardVariable.woff2") format("woff2");
 }
