@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            p {
+                color: blue;
+                font-weight: bold;
+            }
+        </style>
+        <!-- 내부 스타일 방법 -> HTML 문서의 <head> 태그 안에 <style> 태그를 사용하여 적용하는 방법 -->
+        <!-- 이 스타일은 전체 <p> 태그에 적용된다, 하지만 스타일 우선순위는 인라인 스타일이 내부 스타일보다 더 높다 -->
+        <link rel="stylesheet" href="styles.css">
+        <!-- 외부 스타일 방법 -> 외부 스타일시트(External Css)를  HTML 문서에 연결하는 역할을 한다. -->
+        <!-- <link>: Html 문서와 외부 리소스를 연결하는 태그, rel="stylesheet": 이 파일이 스타일시트(CSS)파일임을 명시, href="style.css": 연결할 css 파일의 경로로 -->
+        <title>CSS Practice</title>
+    </head>
+    <body>
+        <header>CSS 연습</header>
+        <main>
+            <p style="color: brown; font-size: 20px;">이것은 인라인 스타일입니다.</p>
+            <!-- 인라인 스타일: HTML 태그 내부에서 style 속성을 사용하여 적용하는 방법 -->
+            <!-- 내부 스타일로 지정되어 있지만 <p>태그 내에서 인라인 스타일로 지정해줘서 인라인 스타일을 따른다. -->
+        </main>
+    </body>
+</html>
