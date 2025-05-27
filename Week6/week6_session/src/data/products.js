@@ -60,3 +60,9 @@ export const products = [
     image: "https://placehold.co/300x200?text=Product+10"
   }
 ];
+
+/**
+ * Dummy Data
+ * - 실제 서버 없이도 UI와 기능을 개발할 수 있게 해주는 가짜 데이터
+ * - 사용 시점: 프론트엔드 개발 시, 백엔드에게 API를 받기 전에 내 코드가 잘 실행되는지 테스트 할 때 사용용
+ */
