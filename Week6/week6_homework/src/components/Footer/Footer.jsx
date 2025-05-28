@@ -7,7 +7,7 @@ import {
 export default function Footer() {
     return (
         <Container>
-            <Logo>HATCHINGROON</Logo>
+            <Logo>HATCHINGROOM</Logo>
             <BottomNavbar />
         </Container>
     );
