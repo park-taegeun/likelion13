@@ -1,4 +1,4 @@
-import BottomNavbar from "./BottomNavbar";
+import BottomNavbar from "../BottomNavbar/BottomNavbar";
 import {
     Container,
     Logo,

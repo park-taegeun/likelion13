@@ -1,8 +1,9 @@
-import Input from "./Input";
-import TopNavbar from "./TopNavbar";
+import Input from "../Input/Input";
+import TopNavbar from "../TopNavbar/TopNavbar";
+import Hlogo from "../../assets/images/H.png";
 import {
     Container,
-    Logo,
+    LogoImg,
     ButtonSection,
     SelectButton,
     LoginButton,
@@ -13,7 +14,7 @@ export default function Header() {
     return (
         <>
         <Container>
-            <Logo>H</Logo>
+            <LogoImg src={Hlogo} alt="해칭룸 로고" />
             <TopNavbar />
             <Input />
             <ButtonSection>
