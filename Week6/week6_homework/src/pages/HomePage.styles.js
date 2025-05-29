@@ -4,3 +4,7 @@ export const Container = styled.div`
     padding: 80px 25px;
     
 `;
+
+export const ClothesList = styled.div`
+
+`;
