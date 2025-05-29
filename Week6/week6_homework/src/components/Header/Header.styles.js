@@ -1,15 +1,15 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
     display: flex;
     flex-direction: row;
     padding: 10px 25px;
     width: 100%;
-    justify-content: space-between;
-    // 스크롤링 함에도 고정시키기 위한
+    justify-content: space-between; 
     background-color: white;
     z-index: 1000;
-    position: fixed;
+    position: fixed; // 스클롤 시에도 위치 고정
 `;
 
 export const LogoImg = styled.img`
@@ -32,8 +32,10 @@ export const SelectButton = styled.button`
     cursor: pointer;
 `;
 
-export const LoginButton = styled.button`
+export const LoginButton = styled(Link)`
     border: none;
+    text-decoration: none;
+    color: black;
     background-color: white;
     font-size: 19px;
     cursor: pointer;

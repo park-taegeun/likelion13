@@ -19,7 +19,7 @@ export default function Header() {
             <Input />
             <ButtonSection>
                 <SelectButton>Korea/KRW</SelectButton>
-                <LoginButton>Login</LoginButton>
+                <LoginButton to="/login">Login</LoginButton>
                 <CartButton>Cart</CartButton>
             </ButtonSection>
         </Container>
