@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 80px 25px;
+    padding: 0px 25px;
     width: 100%;
     align-items: center; // 수직 정렬
 `;
