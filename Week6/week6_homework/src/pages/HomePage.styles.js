@@ -6,5 +6,6 @@ export const Container = styled.div`
 `;
 
 export const ClothesList = styled.div`
-
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); // 1줄을 4개의 열로 만들고 각 열을 동일한 너비로 구성
 `;

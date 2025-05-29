@@ -11,7 +11,7 @@ export default function Pagination() {
             <Ul>
                 <Li><PageButton>{"<<"}</PageButton></Li>
                 <Li><PageButton>Prev</PageButton></Li>
-                <Li><PageButton>1</PageButton></Li>
+                <Li><PageButton className="nowPage">1</PageButton></Li>
                 <Li><PageButton>2</PageButton></Li>
                 <Li><PageButton>3</PageButton></Li>
                 <Li><PageButton>4</PageButton></Li>

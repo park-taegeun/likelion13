@@ -9,7 +9,7 @@ import {
 export default function HomePage() {
     return (
         <Container>
-            {/* 토글 구현 부분 */}
+            {/* 토글 구현 시킬 위치 */}
             <ClothesList>
                 {clothes.map(clothe => (
                     <ClothesCard 

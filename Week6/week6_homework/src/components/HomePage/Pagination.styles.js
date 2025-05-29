@@ -5,6 +5,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     margin-top: 37px;
+    width: 100%;
 `;
 
 export const Ul = styled.ul`
@@ -15,6 +16,10 @@ export const Ul = styled.ul`
 
 export const Li = styled.li`
     list-style: none;
+    
+    .nowPage {
+        color: grey;
+    }
 `;
 
 export const PageButton = styled.button`
