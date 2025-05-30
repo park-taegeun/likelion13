@@ -12,6 +12,10 @@ export const Container = styled.div`
     position: fixed; // 스클롤 시에도 위치 고정
 `;
 
+export const LogoButton = styled(Link)`
+    
+`;
+
 export const LogoImg = styled.img`
     width: 24px;
     height: 25px;

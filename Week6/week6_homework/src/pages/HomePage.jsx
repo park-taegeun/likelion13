@@ -1,6 +1,6 @@
 import Pagination from "../components/HomePage/Pagination";
 import ClothesCard from "../components/HomePage/ClothesCard";
-import SortClothes from "../components/HomePage/SortClothes";
+import SortAndQna from "../components/HomePage/SortAndQna";
 import { useState } from "react";
 import { clothes } from "../data/clothes";
 import {
@@ -24,7 +24,7 @@ export default function HomePage() {
 
     return (
         <Container>
-            <SortClothes setSortState={setSortState} />
+            <SortAndQna setSortState={setSortState} />
             <ClothesList>
                 {SortedList.map(clothe => (
                     <ClothesCard 
