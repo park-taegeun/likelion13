@@ -32,7 +32,6 @@ const Title = styled.p`
 
 const ProductList = styled.div`
   display: flex;
-x``
 `;
 
 /**
