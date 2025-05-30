@@ -1,17 +1,32 @@
 import Pagination from "../components/HomePage/Pagination";
-import { clothes } from "../data/clothes";
 import ClothesCard from "../components/HomePage/ClothesCard";
+import SortClothes from "../components/HomePage/SortClothes";
+import { useState } from "react";
+import { clothes } from "../data/clothes";
 import {
     Container,
     ClothesList,
 } from "./HomePage.styles";
 
 export default function HomePage() {
+    const [sortState, setSortState] = useState("none");
+    let SortedList;
+
+    if (sortState === "low") {
+        SortedList = [...clothes].sort((a, b) => a.price - b.price);
+    }
+    else if (sortState === "high") {
+        SortedList = [...clothes].sort((a, b) => b.price - a.price);
+    }
+    else {
+        SortedList = clothes;
+    }
+
     return (
         <Container>
-            {/* 토글 구현 시킬 위치 */}
+            <SortClothes setSortState={setSortState} />
             <ClothesList>
-                {clothes.map(clothe => (
+                {SortedList.map(clothe => (
                     <ClothesCard 
                         key={clothe.id}
                         name={clothe.name}

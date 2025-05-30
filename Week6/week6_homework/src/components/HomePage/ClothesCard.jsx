@@ -13,7 +13,7 @@ export default function ClothesCard({ name, color, price, image }) {
             <ClotheImg src={image} alt={"상품 이미지 준비 중"}/>
             <ClotheNamePriceDiv>
                 <ClotheName>{name}</ClotheName>
-                <ClothePrice>{price}</ClothePrice>
+                <ClothePrice>₩{price.toLocaleString()}</ClothePrice>
             </ClotheNamePriceDiv>
             <ClotheColor>{color}</ClotheColor>
         </Container>
