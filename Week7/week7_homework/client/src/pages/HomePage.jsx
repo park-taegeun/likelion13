@@ -1,8 +1,8 @@
 import Pagination from "../components/HomePage/Pagination";
 import ClothesCard from "../components/HomePage/ClothesCard";
 import SortAndQna from "../components/HomePage/SortAndQna";
-import { useState } from "react";
-import { clothes } from "../data/clothes";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import {
     Container,
     ClothesList,
@@ -10,16 +10,31 @@ import {
 
 export default function HomePage() {
     const [sortState, setSortState] = useState("none");
+    const [clothesList, setClohtesList] = useState([]);
+    // clothesList: 서버에서 받아온 상품 목록을 저장하는 state 변수 (상품 데이터를 보관하는 변수)
+
+    useEffect(() => {
+        axios
+            .get("http://localhost:3000/clothes")
+            .then((res) => {
+                console.log("불러온 상품 목록: ", res.data);
+                setClohtesList(res.data);
+            })
+            .catch((err) => {
+                console.log("에러 발생:", err);
+            });
+    }, []);
+
     let SortedList;
 
     if (sortState === "low") {
-        SortedList = [...clothes].sort((a, b) => a.price - b.price);
+        SortedList = [...clothesList].sort((a, b) => a.price - b.price);
     }
     else if (sortState === "high") {
-        SortedList = [...clothes].sort((a, b) => b.price - a.price);
+        SortedList = [...clothesList].sort((a, b) => b.price - a.price);
     }
     else {
-        SortedList = clothes;
+        SortedList = clothesList;
     }
 
     return (
