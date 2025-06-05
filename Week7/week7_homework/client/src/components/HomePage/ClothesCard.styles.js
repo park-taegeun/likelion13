@@ -22,9 +22,12 @@ export const ClotheNamePriceDiv = styled.div`
     gap: 80px;
 `;
 
-export const ClotheName = styled.p`
+export const ClotheNameButton = styled.button`
     text-decoration: underline;
     font-weight: 600;
+    border: none;
+    font-size: 15px;
+    background-color: white;
 `;
 
 export const ClothePrice = styled.p`
