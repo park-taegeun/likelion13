@@ -34,7 +34,7 @@ export default function ClothesCard({ name, id,  color, price, image }) {
         const confirmDeletion = prompt("삭제하려고 하는 상품의 이름을 입력해주세요", name);
 
         if(confirmDeletion !== name) {
-            alert("상품 삭제에 실패하였습니다");
+            alert("상품을 찾을 수 없습니다");
             window.location.reload();
             return;
         }
@@ -46,7 +46,7 @@ export default function ClothesCard({ name, id,  color, price, image }) {
                 window.location.reload();
             })
             .catch((err) => {
-                alert("상품 삭제에 실패하였습니다");
+                alert("상품을 찾을 수 없습니다");
                 console.log(err);
             });
     };

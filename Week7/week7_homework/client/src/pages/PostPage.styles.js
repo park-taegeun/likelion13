@@ -15,7 +15,7 @@ export const Title = styled.h1`
     color: black;
 `;
 
-export const FormSection = styled.div`
+export const FormSection = styled.form`
     display: flex;
     flex-direction: column;
     width: 100%;

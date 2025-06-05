@@ -51,7 +51,7 @@ export default function PostPage() {
 
         // POST 구현
         axios
-            .post("http://localhost:3000/clohtes", {
+            .post("http://localhost:3000/clothes", {
                 ...form,
                 price: Number(form.price),
                 rating: Number(form.rating),
@@ -60,7 +60,7 @@ export default function PostPage() {
             .then((res) => {
                 alert("상품이 등록되었습니다.");
                 console.log(res.data);
-
+                
                 setForm({
                     name: "",
                     price: "",
