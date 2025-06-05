@@ -12,16 +12,19 @@ export const QnaButtonDiv = styled.div`
     flex-direction: column;
     justify-content: flex-end;
     margin-bottom: 10px;
-    width: 4.6%
+    width: 4.6%;
+    gap: 5px;
 `;
 
 export const QnaButton = styled(Link)`
+    font-size: 15px;
+    width: 100px;
     border: none;
     background-color: rgb(227, 228, 227);
     color: black;
     text-decoration: none;
     border-radius: 8px;
-    padding: 1px;
+    padding: 2px;
     cursor: pointer;
     text-align: center;
     transition: transform 0.2s ease, background-color 0.2s ease;

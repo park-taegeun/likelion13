@@ -34,3 +34,22 @@ export const ClotheColor = styled.p`
     text-decoration: underline;
     font-weight: 600;
 `;
+
+export const EditButton = styled.button`
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  width: 360px;
+  font-size: 14px;
+
+  &:hover {
+    background-color: #888;
+    color: white;
+  }
+`;

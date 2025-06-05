@@ -44,6 +44,7 @@ export default function HomePage() {
                 {SortedList.map(clothe => (
                     <ClothesCard 
                         key={clothe.id}
+                        id={clothe.id}
                         name={clothe.name}
                         color={clothe.color}
                         price={clothe.price}
