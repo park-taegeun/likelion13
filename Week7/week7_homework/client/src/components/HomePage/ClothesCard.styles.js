@@ -19,7 +19,7 @@ export const ClotheImg = styled.img`
 export const ClotheNamePriceDiv = styled.div`
     display: flex;
     flex-direction: row;
-    gap: 80px;
+    justify-content: space-between;
 `;
 
 export const ClotheNameButton = styled.button`
@@ -32,11 +32,27 @@ export const ClotheNameButton = styled.button`
 
 export const ClothePrice = styled.p`
     font-weight: 600;
+    margin-right: 30px;
+`;
+
+export const ClotheColorDeleteDiv = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 `;
 
 export const ClotheColor = styled.p`
     text-decoration: underline;
     font-weight: 600;
+`;
+
+export const DeleteButton = styled.button`
+    margin-right: 35px;
+    border: none;
+    border-radius: 20px;
+    padding: 2.5px;
+    cursor: pointer;
+    background-color: rgb(244, 62, 62);
 `;
 
 export const EditButton = styled(Link)`
