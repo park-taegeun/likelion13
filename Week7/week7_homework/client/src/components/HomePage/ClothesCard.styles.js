@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
     display: flex;
@@ -35,7 +36,7 @@ export const ClotheColor = styled.p`
     font-weight: 600;
 `;
 
-export const EditButton = styled.button`
+export const EditButton = styled(Link)`
   display: inline-block;
   margin-top: 10px;
   padding: 6px 12px;
@@ -47,6 +48,7 @@ export const EditButton = styled.button`
   color: black;
   width: 360px;
   font-size: 14px;
+  text-align: center;
 
   &:hover {
     background-color: #888;

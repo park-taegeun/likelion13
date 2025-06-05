@@ -3,7 +3,10 @@ import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import InputSection from "../components/PostPage/InputSection";
 import {
-
+    Container,
+    Title,
+    FormSection,
+    EditButton,
 } from "./PutPage.styles";
 
 export default function PutPage() {
@@ -55,7 +58,7 @@ export default function PutPage() {
             })
             .then((res) => {
                 alert("상품이 수정되었습니다.");
-                navigate("/");
+                navigate("/");  
             })
             .catch((err) => {
                 alert("상품 수정에 실패하였습니다.");
@@ -69,7 +72,7 @@ export default function PutPage() {
         <Title>상품 수정</Title>
         <FormSection onSubmit={handleSubmit}>
             <InputSection form={form} handleChange={handleChange} />
-            <AddButton type="submit">수정</AddButton>
+            <EditButton type="submit">수정</EditButton>
         </FormSection>
         </Container>
     );
