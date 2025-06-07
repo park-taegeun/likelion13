@@ -12,8 +12,15 @@ export default function HomePage() {
     const [sortState, setSortState] = useState("none");
     const [clothesList, setClohtesList] = useState([]);
     // clothesList: 서버에서 받아온 상품 목록을 저장하는 state 변수 (상품 데이터를 보관하는 변수)
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
+        fetchClothes();
+    }, []);
+
+    const fetchClothes = () => {
+        setIsLoading(true);
+
         axios
             .get("http://localhost:3000/clothes")
             .then((res) => {
@@ -21,9 +28,11 @@ export default function HomePage() {
                 setClohtesList(res.data);
             })
             .catch((err) => {
-                console.log("에러 발생:", err);
-            });
-    }, []);
+                alert("에러가 발생했습니다");
+                console.log(err);
+            })
+            .finally(() => setIsLoading(false));
+    }
 
     let SortedList;
 
