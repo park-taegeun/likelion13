@@ -1,9 +1,14 @@
-import {
-
-} from "./Homepage.styles";
+import TitleSection from "../components/Homepage/TitleSection";
+import IdeathonSection from "../components/Homepage/IdeathonSection";
+import ReviewSection from "../components/Homepage/ReviewSection";
+import { Container } from "./Homepage.styles";
 
 export default function Homepage() {
     return (
-        <p>본문</p>
+        <Container>
+            <TitleSection />
+            <IdeathonSection />
+            <ReviewSection />
+        </Container>
     );
 }
