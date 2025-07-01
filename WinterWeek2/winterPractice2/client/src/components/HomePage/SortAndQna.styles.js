@@ -12,7 +12,8 @@ export const QnaButtonDiv = styled.div`
     flex-direction: column;
     justify-content: flex-end;
     margin-bottom: 10px;
-    width: 4.6%
+    width: 4.6%;
+    gap: 8px;
 `;
 
 export const QnaButton = styled(Link)`
