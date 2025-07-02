@@ -15,7 +15,7 @@ export default function ClothesCard({ name, id,  color, price, image }) {
     const handlePatchClick = (e) => {
         const newName = prompt("변경할 이름을 입력해주세요", name);
         
-        if(!newName || !newName.trim())
+        if(!newName || newName.trim().length === 0)
             return;
 
         axios

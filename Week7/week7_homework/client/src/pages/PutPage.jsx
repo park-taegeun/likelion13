@@ -10,9 +10,7 @@ import {
 } from "./PutPage.styles";
 
 export default function PutPage() {
-    const { id } = useParams();
-    const navigate = useNavigate();
-    const [form, setForm] = useState({
+    const INITIAL_FORM = {
         name: "",
         price: "",
         image: "",
@@ -23,19 +21,30 @@ export default function PutPage() {
         type: "",
         rating: 0,
         reviews: 0,
-    });
+    };
+    const { id } = useParams();
+    const navigate = useNavigate();
+    const [form, setForm] = useState(INITIAL_FORM);
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
+        fetchClotheInfo();
+    }, [id]);
+
+    const fetchClotheInfo = () => {
+        setIsLoading(true);
+
         axios
             .get(`http://localhost:3000/clothes/${id}`)
             .then((res) => {
                 setForm(res.data);
             })
             .catch((err) => {
-                alert("상품 정보를 불러오는데 실패하였습니다.");
+                alert("상품 정보를 불러오는데 실패하였습니다");
                 console.log(err);
-            });
-    }, [id]);
+            })
+            .finally(() => setIsLoading(false));
+    }
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -48,23 +57,28 @@ export default function PutPage() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        //PUT 요청
+        submitPutForm();
+    };
+
+    const submitPutForm = () => {
+        setIsLoading(true);
+
         axios
-            .put(`http://localhost:3000/clothes/${id}`, {
+            .put(`http://localhost/3000/clothes/${id}`, {
                 ...form,
                 price: Number(form.price),
                 rating: Number(form.rating),
                 reviews: Number(form.reviews),
             })
-            .then((res) => {
-                alert("상품이 수정되었습니다.");
-                navigate("/");  
+            .then(() => {
+                alert("상품이 수정되었습니다");
+                navigate("/");
             })
             .catch((err) => {
-                alert("상품 수정에 실패하였습니다.");
+                alert("상품 수정에 실패하였습니다");
                 console.log(err);
-            });
-
+            })
+            .finally(() => setIsLoading(false));
     };
 
     return (

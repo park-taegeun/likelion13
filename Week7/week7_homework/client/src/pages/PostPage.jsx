@@ -10,7 +10,7 @@ import {
 import axios from "axios";
 
 export default function PostPage() {
-    const [form, setForm] = useState({
+    const INITIAL_FORM = {
         name: "",
         price: "",
         image: "",
@@ -21,8 +21,10 @@ export default function PostPage() {
         type: "",
         rating: 0,
         reviews: 0,
-    });
+    };
+    const [form, setForm] = useState(INITIAL_FORM);
     const navigate = useNavigate();
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -49,7 +51,12 @@ export default function PostPage() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // POST 구현
+        submitPostForm();
+    };
+
+    const submitPostForm = () => {
+        setIsLoading(true);
+
         axios
             .post("http://localhost:3000/clothes", {
                 ...form,
@@ -58,28 +65,16 @@ export default function PostPage() {
                 reviews: Number(form.reviews),
             })
             .then((res) => {
-                alert("상품이 등록되었습니다.");
+                alert("상품이 등록되었습니다");
                 console.log(res.data);
                 
-                setForm({
-                    name: "",
-                    price: "",
-                    image: "",
-                    color: "",
-                    size: "",
-                    gender: "unisex",
-                    soldout: false,
-                    type: "",
-                    rating: 0,
-                    reviews: 0,
-                })
-
-                navigate("/");
+                setForm(INITIAL_FORM);
             })
             .catch((err) => {
-                alert("상품 등록에 실패하였습니다.");
+                alert("상품 등록에 실패하였습니다");
                 console.log(err);
-            });
+            })
+            .finally(() => setIsLoading(false));
     };
 
     return (
