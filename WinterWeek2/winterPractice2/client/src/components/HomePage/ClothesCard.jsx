@@ -5,6 +5,7 @@ import {
     ClotheName,
     ClothePrice,
     ClotheColor,
+    EditButton,
 } from "./ClothesCard.styles";
 
 export default function ClothesCard({ name, color, price, image }) {
@@ -16,6 +17,7 @@ export default function ClothesCard({ name, color, price, image }) {
                 <ClothePrice>₩{price.toLocaleString()}</ClothePrice>
             </ClotheNamePriceDiv>
             <ClotheColor>{color}</ClotheColor>
+            <EditButton to={`/put/${id}`}>수정</EditButton>
         </Container>
     );
 }

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
     display: flex;
@@ -33,4 +34,24 @@ export const ClothePrice = styled.p`
 export const ClotheColor = styled.p`
     text-decoration: underline;
     font-weight: 600;
+`;
+
+export const EditButton = styled(Link)`
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  width: 360px;
+  font-size: 14px;
+  text-align: center;
+
+  &:hover {
+    background-color: #888;
+    color: white;
+  }
 `;
